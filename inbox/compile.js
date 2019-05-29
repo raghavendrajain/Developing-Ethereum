@@ -8,5 +8,5 @@ const source = fs.readFileSync(inboxPath, "utf8");
 // to see the ouput of the compiled contract, uncomment the line below
 // console.log(solc.compile(source, 1));
 
-module.exports = solc.compile(source, 1)[":Inbox"]; // to make it available to other files
+module.exports = solc.compile(source, 1).contracts[":Inbox"]; // to make it available to other files
 
