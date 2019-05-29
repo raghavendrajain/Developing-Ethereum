@@ -21,6 +21,7 @@ contract Inbox {
     // we can also make a helper function and use "private"
     // "view" means it is not modifying any of the data in this function
     // "returns" is only used when the contract is not being modified. We can not return data from the function that is modifying our contract
+    // Strictly speaking, we do not need this function as the value of message can be accessed from the contract storage
     function getMessage() public view returns (string){
         return message;
     }
