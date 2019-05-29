@@ -26,6 +26,4 @@ contract Inbox {
         return message;
     }
 
-
-    
 }
