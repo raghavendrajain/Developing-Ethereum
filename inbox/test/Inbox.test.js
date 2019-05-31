@@ -16,11 +16,11 @@ beforeEach(async () =>{
     accounts = await web3.eth.getAccounts();
     //Use one of the accounts to deploy the contract. We are creating an instance of the contract, see capital C in "Contract"
     inbox = await new web3.eth.Contract (JSON.parse(interface))
-        .deploy({data: bytecode, arguments: ["Hi. there"]})
+        .deploy({data: bytecode, arguments: [INITIAL_STRING]})
         .send({from: accounts[0], gas: "1000000"})
 
-    // ADD THIS ONE LINE RIGHT HERE!!!!! <-------
-    // inbox.setProvider(provider);
+    // Set the provider
+    inbox.setProvider(provider);
 });
 
 
